@@ -5,7 +5,11 @@ export class Footer extends Component {
 
 	render() {
 		return (
-			<h1>Footer</h1>
+			<footer>
+				<div>	
+					<p>Copyright</p>
+	       		</div>
+			</footer>
 		)
 	}
 }

@@ -1,7 +1,115 @@
+html {
+	min-height: 100%;
+} 
 body {
-	background: Cornsilk;
+	height: 100vh;
+	position: relative;
+	background-color: white;
+	color: #2C2C2C;
+	font: normal 100% Cambria, Georgia, serif;
+} 
+Header {
+	background-color: #9c48ea;
+	font-size: 2em;
+	height: 4.5vh;
+	text-align: center;
+	color: #f4f1c8;
 }
-.ico {
-	height: 50px;
-	width: 50px;
+Header .headericon {
+	float: left;
+	height: 2em;
+	width: 2em;
+	line-height: 200%;
+}
+Header .heading {
+	display: inline-block;
+	margin: 0 auto;
+}
+Header ul {
+	font-size: 1em;
+	float: right;
+	height: 0;
+}
+Header ul li {
+	display: inline-block;
+	margin-right: 2px;
+	line-height: 200%;
+	padding: 0;
+}
+Header ul li a {
+	display: inline-block;
+	margin-right: 2px;
+	text-decoration: none;
+	color: #f4f1c8;
+}
+#Home {
+	color: red;
+}
+#heroUnit {
+	background: url('../assets/jellybeans.jpg');
+	height: 40%;
+	width: 100%;
+}
+#heroUnit .welcome {
+	text-shadow:1px 1px 1px #f4f1c8;
+	color: #0326c1;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.welcome p {
+	font-size: 100px;
+}
+
+#page {
+	height: 86vh;
+	width: 100%;
+}
+#navigation {
+	height: 4%;
+	width: 100%;
+	background-color: purple;
+}
+#navigation nav {
+	height: 100%;
+	margin: 0 auto;
+}
+#navigation li {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 190%
+}
+/* Main Content*/
+.contentBox {
+	height: 56%;
+	background: #f9a4f9;
+}
+.content {
+	background: #f9a4f9;
+}
+.candyCategory {
+	display: inline-block;
+	width: 30%;
+	margin-right: 5%;
+}
+.candyCategory:last-child {
+	margin-right: 0;
+}
+
+footer {
+	height: 9.5vh;
+	width: 100%;
+	background-color: #9c48ea;
+	font-size: 1.5em;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+
+/***** Helpers *******/
+.wrap {
+	width: 80%;
+	margin: 0 auto;
 }

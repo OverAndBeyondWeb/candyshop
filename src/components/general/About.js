@@ -5,7 +5,10 @@ export class About extends Component {
 
 	render() {
 		return (
-			<h1>About</h1>
+			<div id="about">
+				<h1>About</h1>
+			</div>
+
 		)
 	}
 }
