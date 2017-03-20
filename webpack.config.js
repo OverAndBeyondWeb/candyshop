@@ -21,6 +21,11 @@ module.exports = {
 				query: {
 					presets: ['es2015', 'react']
 				}
+			},
+			{
+				test: /\.css$/,
+				include: path.join(__dirname, 'src', 'css'),
+				loader: 'style-loader!css-loader'
 			}
 		]
 	}

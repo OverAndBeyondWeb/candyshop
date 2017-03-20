@@ -12,21 +12,32 @@ import {SignUp} from './forms/SignUp';
 import {SuggestionsAndRequests} from './forms/SuggestionsAndRequests';
 
 
+//******** React Icons **********//
+import TiClipboard from 'react-icons/lib/ti/clipboard';
+import TiChartPie from 'react-icons/lib/ti/chart-pie';
+import TiDocumentText from 'react-icons/lib/ti/document-text';
+
+//******** CSS **********//
+import '../css/main.css';
+
 export class App extends Component {
 
 	render() {
 		return (
 			<div>
+				<TiClipboard className='ico'/>
 				<Header />
 				<Home />
 				<About />
 				<Contact />
 				<Footer />
 				<hr />
+				<TiChartPie className='ico'/>
 				<ChocolateCandy />
 				<GummyCandy />
 				<HardCandy />
 				<hr />
+				<TiDocumentText className='ico'/>
 				<Login />
 				<SignUp />
 				<SuggestionsAndRequests />
