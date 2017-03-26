@@ -1,7 +1,10 @@
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {Header} from './Header';
-import {Footer} from './Footer';
+import {Hero} from './Hero';
 import {Navigation} from './Navigation';
+
+
 
 
 //import '../../css/test.css'
@@ -13,14 +16,9 @@ export class Home extends Component {
 		return (
 			<div id="home">
 				<Header />
+				<Hero />
+				<Navigation />
 				<div id="page">
-					<div id="heroUnit">
-						<div className="welcome wrap">
-							<p>Welcome to the<br />
-							Candy Shop</p>
-						</div>
-					</div>
-					<Navigation />
 					<div className="contentBox">
 						<div className="content wrap">
 							<div className="candyCategory">
@@ -41,7 +39,6 @@ export class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<Footer />
 			</div>
 		)
 	}

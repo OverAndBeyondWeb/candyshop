@@ -1,6 +1,7 @@
 import {Component} from 'react';
+import {Link} from 'react-router-dom'
 import TiClipboard from 'react-icons/lib/ti/clipboard';
-//import '../../css/bootstrap.css';
+
 
 
 export class Header extends Component {
@@ -8,22 +9,23 @@ export class Header extends Component {
 	render() {
 		return (
 			<header>
-				<div className="container">
-					<div className="row"> 
-						<div className="col-md-4">
-							<TiClipboard className="headericon"/>
-						</div>
-						<div className="col-md-4">
-							<h1 className="heading">CandyShop</h1>
-						</div>
-						<div className="col-md-4">
-			        		<ul>
-			            		<li><a href="#contact">Login</a></li> 
-			           		</ul>
-			           	</div>
-	           		</div>
-	       		</div>
-			</header>
+				<div className="heading wrap">									 
+					<div className="column">
+						<TiClipboard className="logo"/>
+					</div>
+					<div className=" column title">
+						<Link to="/">CandyShop</Link>
+					</div>
+					<div className="column userstatus">
+		        		<Link to="/login">
+		        			Login
+		        		</Link>
+		        		<Link to="/signup">
+		        			Sign Up
+		        		</Link>
+	        		</div>	           
+	           	</div>         		
+	       	</header>
 		)
 	}
 }

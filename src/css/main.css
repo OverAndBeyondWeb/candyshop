@@ -8,46 +8,45 @@ body {
 	color: #2C2C2C;
 	font: normal 100% Cambria, Georgia, serif;
 } 
-Header {
+header {
 	background-color: #9c48ea;
 	font-size: 2em;
 	height: 4.5vh;
-	text-align: center;
 	color: #f4f1c8;
 }
-Header .headericon {
-	float: left;
-	height: 2em;
-	width: 2em;
-	line-height: 200%;
+header .heading {
+	height: 100%;
+	position: relative;
 }
-Header .heading {
+header .column {
 	display: inline-block;
-	margin: 0 auto;
+	width: 33.333%;
+	height: 100%;
 }
-Header ul {
-	font-size: 1em;
-	float: right;
-	height: 0;
-}
-Header ul li {
-	display: inline-block;
-	margin-right: 2px;
-	line-height: 200%;
-	padding: 0;
-}
-Header ul li a {
-	display: inline-block;
-	margin-right: 2px;
+header a {
 	text-decoration: none;
-	color: #f4f1c8;
 }
+header .logo {
+	height: 1.3em;
+	width: 1.3em;
+	line-height: 200%;
+}
+header .title {
+	text-align: center;
+}
+
+header .userstatus {
+	font-size: .7em;
+	height: 0;
+	text-align: right;
+}
+
 #Home {
 	color: red;
 }
 #heroUnit {
 	background: url('../assets/jellybeans.jpg');
-	height: 40%;
+	height: 30vh;
 	width: 100%;
 }
 #heroUnit .welcome {
@@ -62,11 +61,12 @@ Header ul li a {
 }
 
 #page {
-	height: 86vh;
+	height: 52vh;
 	width: 100%;
+	background: #fcd9fc;
 }
 #navigation {
-	height: 4%;
+	height: 4.5vh;
 	width: 100%;
 	background-color: purple;
 }
@@ -84,10 +84,10 @@ Header ul li a {
 /* Main Content*/
 .contentBox {
 	height: 56%;
-	background: #f9a4f9;
+	
 }
 .content {
-	background: #f9a4f9;
+	
 }
 .candyCategory {
 	display: inline-block;
@@ -97,9 +97,23 @@ Header ul li a {
 .candyCategory:last-child {
 	margin-right: 0;
 }
+.sidemenu {
+	display: inline-block;
+	width: 25%;
+	background-color: LightCyan;
+
+}
+.candypage {
+	display: inline-block;
+	width: 75%;
+	background-color: LemonChiffon;
+}
+.candypage h1 {
+
+}
 
 footer {
-	height: 9.5vh;
+	height: 9vh;
 	width: 100%;
 	background-color: #9c48ea;
 	font-size: 1.5em;
