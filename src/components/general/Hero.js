@@ -6,7 +6,7 @@ export class Hero extends Component {
 	render() {
 		return (
 		
-				<div id="heroUnit">
+				<div id="mainhero">
 					<div className="welcome wrap">
 						<p>Welcome to the<br />
 						Candy Shop</p>

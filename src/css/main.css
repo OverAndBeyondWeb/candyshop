@@ -7,16 +7,20 @@ body {
 	background-color: white;
 	color: #2C2C2C;
 	font: normal 100% Cambria, Georgia, serif;
+	box-sizing: border-box;
 } 
+
+/************** Header Component *************/
 header {
 	background-color: #9c48ea;
 	font-size: 2em;
 	height: 4.5vh;
-	color: #f4f1c8;
+	color: LightYellow;
 }
 header .heading {
 	height: 100%;
 	position: relative;
+	
 }
 header .column {
 	display: inline-block;
@@ -25,6 +29,7 @@ header .column {
 }
 header a {
 	text-decoration: none;
+	color: #f4f1c8;
 }
 header .logo {
 	height: 1.3em;
@@ -40,16 +45,13 @@ header .userstatus {
 	height: 0;
 	text-align: right;
 }
-
-#Home {
-	color: red;
-}
-#heroUnit {
+/************* Hero Component **************/
+#mainhero {
 	background: url('../assets/jellybeans.jpg');
 	height: 30vh;
 	width: 100%;
 }
-#heroUnit .welcome {
+#mainhero .welcome {
 	text-shadow:1px 1px 1px #f4f1c8;
 	color: #0326c1;
 	height: 100%;
@@ -59,12 +61,7 @@ header .userstatus {
 .welcome p {
 	font-size: 100px;
 }
-
-#page {
-	height: 52vh;
-	width: 100%;
-	background: #fcd9fc;
-}
+/************* Main Navigation **********/
 #navigation {
 	height: 4.5vh;
 	width: 100%;
@@ -81,6 +78,13 @@ header .userstatus {
 	font-size: 1.5em;
 	line-height: 190%
 }
+/************* Home Component ***********/
+#page {
+	height: 52vh;
+	width: 100%;
+	background: #fcd9fc;
+}
+
 /* Main Content*/
 .contentBox {
 	height: 56%;
@@ -97,21 +101,69 @@ header .userstatus {
 .candyCategory:last-child {
 	margin-right: 0;
 }
+/********** Candies Component ***********/
 .sidemenu {
 	display: inline-block;
-	width: 25%;
-	background-color: LightCyan;
-
+	width: 20%;
+	height: 100%;
+	background-color: SaddleBrown;
+	text-align: center;
+	color: LightYellow;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.sidemenu .headingcontainer {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background: Maroon;
+}
+.sidemenu h3 {
+	font-size: 1.3em;
 }
 .candypage {
+	height: 86.5vh;
+	width: 100%;
+	background-color: LightCyan;
+	position: relative;
+}
+.candieshero {
+	height: 20%;
+	font-size: 4em;
+	background-color: Salmon;
+	text-align: center;
+}
+.maincontent {
 	display: inline-block;
-	width: 75%;
+	width: 80%;
+	height: 100%;
 	background-color: LemonChiffon;
+	position: absolute;
+	top: 0;
+	left: 20%;
 }
-.candypage h1 {
-
+.maincontent .headingcontainer {
+	font-size: 2em;
+	text-align: center;
 }
-
+/********** Candy Lists ********/
+.candylist {
+	border: red dotted 2px;
+	height: 80%;
+	text-align: center;
+}
+.candycontainer {
+	height: 90%;
+	width: 90%;
+}
+.candycontainer div {
+	display: inline-block;
+	height: 25%;
+	width: 28%;
+	border: blue dotted 2px;
+	text-align: center;
+}
+/********** Footer *********/
 footer {
 	height: 9vh;
 	width: 100%;

@@ -5,7 +5,22 @@ export class ChocolateCandy extends Component {
 
 	render() {
 		return (
-			<h1>ChocolateCandy</h1>
+			<div className="chocolate candylist">
+				<div className="headingcontainer">
+					<h2>Chocolate Candy</h2>
+				</div>
+				<div className="candycontainer">
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>
+					<div>truffles</div>	
+				</div>
+			</div>
 		)
 	}
 }
