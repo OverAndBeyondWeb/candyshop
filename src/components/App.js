@@ -51,8 +51,12 @@ export class App extends Component {
 
 			<Router>
 				<div>
-					<Route exact path="/" component={Candies} />
-					<Route exact path="/candies" component={Candies} />
+					<Route exact path="/" component={Home} />
+					<Route path="/candies" component={Candies} >
+						<Route path="/candies/hard" children={HardCandy} />
+						<Route path="/candies/gummy" children={GummyCandy} />
+						<Route path="/candies/chocolate" children={ChocolateCandy} />
+					</Route>
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route path="/requests" component={SuggestionsAndRequests} />
