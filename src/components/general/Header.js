@@ -20,6 +20,7 @@ export class Header extends Component {
 		        		<Link to="/login">
 		        			Login
 		        		</Link>
+		        		|
 		        		<Link to="/signup">
 		        			Sign Up
 		        		</Link>

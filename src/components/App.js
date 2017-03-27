@@ -57,6 +57,8 @@ export class App extends Component {
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route path="/requests" component={SuggestionsAndRequests} />
+					<Route path="/login" component={Login} />
+					<Route path="/signup" component={SignUp} />
 					<Footer />
 				</div>
 			</Router>
