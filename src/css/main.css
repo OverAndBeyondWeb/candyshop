@@ -132,6 +132,7 @@ header .userstatus {
 	font-size: 4em;
 	background-color: Salmon;
 	text-align: center;
+	line-height: 250%;
 }
 .maincontent {
 	display: inline-block;
@@ -155,6 +156,7 @@ header .userstatus {
 .candycontainer {
 	height: 90%;
 	width: 90%;
+	margin: auto;
 }
 .candycontainer div {
 	display: inline-block;

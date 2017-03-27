@@ -18,7 +18,7 @@ export class Candies extends Component {
 				<div className="candypage">
 					<div className="sidemenu">
 						<div className="headingcontainer">
-							<h3>CandyShop</h3>
+							<h3><Link to="/">CandyShop</Link></h3>
 						</div>
 						<nav className="candynav">
 							<ul>
@@ -31,10 +31,10 @@ export class Candies extends Component {
 						<hr />
 						<nav className="sitenav">
 							<ul>
-								<li>Home</li>
-								<li>About</li>
-								<li>Contact</li>
-								<li>Requests</li>
+								<li><Link to="/">Home</Link></li>
+								<li><Link to="/about">About</Link></li>
+								<li><Link to="/contact">Contact</Link></li>
+								<li><Link to="/requests">Requests</Link></li>
 							</ul>
 						</nav>
 					</div>
@@ -45,12 +45,13 @@ export class Candies extends Component {
 
 							<h1>Candies</h1>
 						</div>
-						{this.props.location.pathname === "/candies/gummy" ? 
-							<GummyCandy /> : this.props.location.pathname === "/candies/hard" ?
-							<HardCandy /> : this.props.location.pathname === "/candies/chocolate" ?
-							<ChocolateCandy /> : <AllCandy />} 
-							
+						<Route path={`${this.props.match.url}/:candy`} component={this.props.location.pathname === "/candies/hard" ?
+							HardCandy : this.props.location.pathname === "/candies/gummy" ?
+							GummyCandy : this.props.location.pathname === "/candies/chocolate" ?
+							ChocolateCandy : null}/>
+						<Route exact path={this.props.match.url} component={AllCandy}/>	
 					</div>
+		
 						
 				</div>
 

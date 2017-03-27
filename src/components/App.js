@@ -2,6 +2,7 @@
 //******** React Lib *********//
 import {Component} from 'react';
 import {BrowserRouter as Router, Route, Link, hashHistory} from 'react-router-dom';
+import {Switch} from 'react-router';
 
 //******* Components **********//
 import {Home} from './general/Home';
@@ -52,11 +53,7 @@ export class App extends Component {
 			<Router>
 				<div>
 					<Route exact path="/" component={Home} />
-					<Route path="/candies" component={Candies} >
-						<Route path="/candies/hard" children={HardCandy} />
-						<Route path="/candies/gummy" children={GummyCandy} />
-						<Route path="/candies/chocolate" children={ChocolateCandy} />
-					</Route>
+					<Route path="/candies" component={Candies} />
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route path="/requests" component={SuggestionsAndRequests} />
