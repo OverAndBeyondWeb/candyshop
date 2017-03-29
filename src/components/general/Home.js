@@ -17,7 +17,6 @@ export class Home extends Component {
 	render() {
 		return (
 			<div id="home">
-				<Header />
 				<Hero />
 				<Navigation />
 				<div id="page">

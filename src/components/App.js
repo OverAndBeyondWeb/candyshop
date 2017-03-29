@@ -38,7 +38,7 @@ export class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isLoggedIn: false,
+			isLoggedIn: true,
 			isFullPage: true
 		}
 		this.setIsFullPage = this.setIsFullPage.bind(this);
@@ -51,13 +51,12 @@ export class App extends Component {
 		});
 	}
 
-	render() 
-	{console.log(this.state.isFullPage)
+	render() {
 		return (
 
 			<Router>
 				<div>
-					{}
+					{this.state.isFullPage ? <Header isLoggedIn={this.state.isLoggedIn}/> : null}
 					<Route exact path="/"  component={Home} id="bald"/>
 					<Route path="/candies" component={Candies} />
 					<Route path="/about" component={About} />

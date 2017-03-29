@@ -14,7 +14,6 @@ export class Candies extends Component {
 		return (
 
 			<div id="candies">
-				<Header />
 				<div className="candypage">
 					<div className="sidemenu">
 						<div className="headingcontainer">

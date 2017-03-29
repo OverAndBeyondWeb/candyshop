@@ -2,10 +2,22 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom'
 import TiClipboard from 'react-icons/lib/ti/clipboard';
 
+const LoggedIn = () => (
+	<div className="column userstatus">
+		<Link to="/login">Hi, John </Link>|
+		<Link to="/signup"> LOG OUT</Link>
+	</div>
+)
 
+const LoggedOut = () => (
+	<div className="column userstatus">
+		<Link to="/login">LOGIN </Link>|
+		<Link to="/signup"> SIGN UP</Link>
+	</div>	 
+)
 
 export class Header extends Component {
-
+	
 	render() {
 		return (
 			<header>
@@ -16,10 +28,7 @@ export class Header extends Component {
 					<div className=" column title">
 						<Link to="/">CandyShop</Link>
 					</div>
-					<div className="column userstatus">
-		        		<Link to="/login">LOGIN </Link>|
-		        		<Link to="/signup"> SIGN UP</Link>
-	        		</div>	           
+					{this.props.isLoggedIn ? <LoggedIn /> : <LoggedOut />}         
 	           	</div>         		
 	       	</header>
 		)

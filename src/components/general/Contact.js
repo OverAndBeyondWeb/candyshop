@@ -9,7 +9,6 @@ export class Contact extends Component {
 	render() {
 		return (
 			<div id="contact">
-				<Header />
 				<Hero />
 				<Navigation />
 				<div className="wrap">
