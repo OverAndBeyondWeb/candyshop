@@ -33,37 +33,47 @@ import '../css/main.css';
 
 //******* App *********//
 
-const Bay = () => (
-  <div>
-    <h2>Bay</h2>
-  </div>
-)
 
 export class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isLoggedIn: false
+			isLoggedIn: false,
+			isFullPage: true
 		}
+		this.setIsFullPage = this.setIsFullPage.bind(this);
+	}
+	
+
+	setIsFullPage(bool) {
+		this.setState({
+			isFullPage: bool
+		});
 	}
 
-	render() {
+	render() 
+	{console.log(this.state.isFullPage)
 		return (
 
 			<Router>
 				<div>
-					<Route exact path="/" component={Home} />
+					{}
+					<Route exact path="/"  component={Home} id="bald"/>
 					<Route path="/candies" component={Candies} />
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
-					<Route path="/requests" component={SuggestionsAndRequests} />
-					<Route path="/login" component={Login} />
-					<Route path="/signup" component={SignUp} />
-					<Footer />
+					<Route path="/requests" render={() => <SuggestionsAndRequests setIsFullPage={this.setIsFullPage}/>} />
+					<Route path="/login" render={() => <Login setIsFullPage={this.setIsFullPage}/>} />
+					<Route path="/signup" render={() => <SignUp setIsFullPage={this.setIsFullPage}/>} />
+					{this.state.isFullPage ? <Footer /> : null}
 				</div>
 			</Router>
 		)
 	}
+}
+
+App.defaultProps = {
+	isFullPage: true
 }
 
 // export class App extends Component {

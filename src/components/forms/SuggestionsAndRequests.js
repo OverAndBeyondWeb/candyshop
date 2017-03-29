@@ -3,10 +3,17 @@ import {Link} from 'react-router-dom';
 
 export class SuggestionsAndRequests extends Component {
 
+	componentWillMount() {
+		this.props.setIsFullPage(false);
+	}
+	componentWillUnmount() {
+		this.props.setIsFullPage(true);
+	}
+
 	render() {
 		return (
 			<div className="suggestionsandrequests">  
-				  <form id="contact" action="" method="post">
+				  <form id="contactform" action="" method="post">
 				    <h3>We'd love to hear your feedback!</h3>
 				    <h4>Send us your requests and comments</h4>
 				    <fieldset>

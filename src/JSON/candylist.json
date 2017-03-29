@@ -1,0 +1,193 @@
+{
+	"candies": [
+		{
+		"id": "1",
+		"name": "jolly rancher",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "2",
+		"name": "peppermint",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "3",
+		"name": "life savers",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "4",
+		"name": "lemon heads",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "5",
+		"name": "jaw breakers",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "6",
+		"name": "altoids",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "7",
+		"name": "runts",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "8",
+		"name": "dum dums",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "9",
+		"name": "blow pops",
+		"category": "hard",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "10",
+		"name": "gummy worms",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "11",
+		"name": "gummy bears",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "12",
+		"name": "apple gummy drops",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "13",
+		"name": "grape gummy drops",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "14",
+		"name": "orange slices",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "15",
+		"name": "lemon slices",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "16",
+		"name": "grape slices",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "17",
+		"name": "watermelon slices",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "18",
+		"name": "laffy taffy",
+		"category": "gummy",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "19",
+		"name": "m and m's",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "20",
+		"name": "reese's cups",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "21",
+		"name": "milky way",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "22",
+		"name": "snickers",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "23",
+		"name": "toblerone",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "24",
+		"name": "mr. goodbar",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "25",
+		"name": "milk duds",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "26",
+		"name": "reese's pieces",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		},
+		{
+		"id": "27",
+		"name": "tootsie rolls",
+		"category": "chocolate",
+		"price": "$2.59",
+		"taxrate": ".08"
+		}
+	]	
+}

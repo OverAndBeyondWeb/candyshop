@@ -3,9 +3,19 @@ import {Link} from 'react-router-dom';
 
 
 export class Login extends Component {
+	
+	
+	componentWillMount() {
+		this.props.setIsFullPage(false);
+	}
+	componentWillUnmount() {
+		this.props.setIsFullPage(true);
+	}
 
 	render() {
+		
 		return (
+
 			<div className="loginpage">
 			  <div className="form">
 			  <h3>Login to your account!</h3>

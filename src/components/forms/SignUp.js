@@ -4,6 +4,18 @@ import {Link} from 'react-router-dom';
 
 export class SignUp extends Component {
 
+	setIsFullPage(bool) {
+		this.props.setIsFullPage(bool);
+	}
+
+	componentWillMount() {
+		this.setIsFullPage(false);
+	}
+
+	componentWillUnmount() {
+		this.setIsFullPage(true);
+	}
+	
 	render() {
 		return (
 			<div className="loginpage">

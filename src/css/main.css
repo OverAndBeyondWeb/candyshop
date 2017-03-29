@@ -41,7 +41,8 @@ header .title {
 }
 
 header .userstatus {
-	font-size: .7em;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: .5em;
 	height: 0;
 	text-align: right;
 }
@@ -106,7 +107,7 @@ header .userstatus {
 	display: inline-block;
 	width: 20%;
 	height: 100%;
-	background-color: SaddleBrown;
+	background-color: #4E2E28; /* chocolate brown*/
 	text-align: center;
 	color: LightYellow;
 	position: absolute;
@@ -121,6 +122,9 @@ header .userstatus {
 .sidemenu h3 {
 	font-size: 1.3em;
 }
+.sidemenu a {
+  color: LemonChiffon;
+}
 .candypage {
 	height: 86.5vh;
 	width: 100%;
@@ -130,7 +134,7 @@ header .userstatus {
 .candieshero {
 	height: 20%;
 	font-size: 4em;
-	background-color: Salmon;
+	background-color: #FF69B4; /* candy pink */
 	text-align: center;
 	line-height: 250%;
 }
@@ -183,7 +187,6 @@ header .userstatus {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
-  border: red dotted 2px;
 }
 .form {
   position: relative;
@@ -210,7 +213,7 @@ header .userstatus {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #9c48ea;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -221,7 +224,7 @@ header .userstatus {
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #833cc4;
 }
 .form .message {
   margin: 15px 0 0;
@@ -296,16 +299,16 @@ header .userstatus {
   color: #777;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform input[type="tel"],
+#contactform input[type="url"],
+#contactform textarea,
+#contactform button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#contact {
+#contactform {
   background: #F9F9F9;
   padding: 25px;
   margin: 150px 0;
@@ -322,11 +325,11 @@ fieldset {
   width: 100%;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea {
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform input[type="tel"],
+#contactform input[type="url"],
+#contactform textarea {
   width: 100%;
   border: 1px solid #ccc;
   background: #FFF;
@@ -334,42 +337,42 @@ fieldset {
   padding: 10px;
 }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
+#contactform input[type="text"]:hover,
+#contactform input[type="email"]:hover,
+#contactform input[type="tel"]:hover,
+#contactform input[type="url"]:hover,
+#contactform textarea:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
   border: 1px solid #aaa;
 }
 
-#contact textarea {
+#contactform textarea {
   height: 100px;
   max-width: 100%;
   resize: none;
 }
 
-#contact button[type="submit"] {
+#contactform button[type="submit"] {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #4CAF50;
+  background: #9c48ea;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
 }
 
-#contact button[type="submit"]:hover {
+#contactform button[type="submit"]:hover {
   background: #43A047;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-#contact button[type="submit"]:active {
+#contactform button[type="submit"]:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -377,8 +380,8 @@ fieldset {
   text-align: center;
 }
 
-#contact input:focus,
-#contact textarea:focus {
+#contactform input:focus,
+#contactform textarea:focus {
   outline: 0;
   border: 1px solid #aaa;
 }

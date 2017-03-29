@@ -17,13 +17,8 @@ export class Header extends Component {
 						<Link to="/">CandyShop</Link>
 					</div>
 					<div className="column userstatus">
-		        		<Link to="/login">
-		        			Login
-		        		</Link>
-		        		|
-		        		<Link to="/signup">
-		        			Sign Up
-		        		</Link>
+		        		<Link to="/login">LOGIN </Link>|
+		        		<Link to="/signup"> SIGN UP</Link>
 	        		</div>	           
 	           	</div>         		
 	       	</header>
