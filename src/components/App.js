@@ -38,12 +38,17 @@ export class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isLoggedIn: true,
-			isFullPage: true
+			isLoggedIn: false,
+			isFullPage: true,
+			users:[]
 		}
 		this.setIsFullPage = this.setIsFullPage.bind(this);
 	}
 	
+	addUserToState(newUser) {
+		this.setState({users: this.state.users.concat(newUser)});
+		console.log(this.state.users);
+	}
 
 	setIsFullPage(bool) {
 		this.setState({
@@ -63,7 +68,9 @@ export class App extends Component {
 					<Route path="/contact" component={Contact} />
 					<Route path="/requests" render={() => <SuggestionsAndRequests setIsFullPage={this.setIsFullPage}/>} />
 					<Route path="/login" render={() => <Login setIsFullPage={this.setIsFullPage}/>} />
-					<Route path="/signup" render={() => <SignUp setIsFullPage={this.setIsFullPage}/>} />
+					<Route path="/signup" render={() => <SignUp 
+															setIsFullPage={this.setIsFullPage}
+															addUserToState={this.addUserToState.bind(this)}/>} />
 					{this.state.isFullPage ? <Footer /> : null}
 				</div>
 			</Router>
@@ -74,29 +81,3 @@ export class App extends Component {
 App.defaultProps = {
 	isFullPage: true
 }
-
-// export class App extends Component {
-
-// 	render() {
-// 		return (
-// 			<div>
-// 				<Header />
-// 				<Home />
-// 				<About />
-// 				<Contact />
-// 				<Footer />
-// 				<hr />
-// 				<TiChartPie className='ico'/>
-// 				<ChocolateCandy />
-// 				<GummyCandy />
-// 				<HardCandy />
-// 				<hr />
-// 				<TiDocumentText className='ico'/>
-// 				<Login />
-// 				<SignUp />
-// 				<SuggestionsAndRequests />
-// 				<hr />
-// 			</div>
-// 		)
-// 	}
-// }

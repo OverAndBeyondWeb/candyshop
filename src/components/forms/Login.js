@@ -5,15 +5,15 @@ import {Link} from 'react-router-dom';
 export class Login extends Component {
 	
 	
-	componentWillMount() {
+	componentDidMount() {
 		this.props.setIsFullPage(false);
 	}
 	componentWillUnmount() {
 		this.props.setIsFullPage(true);
+
 	}
 
 	render() {
-		
 		return (
 
 			<div className="loginpage">
