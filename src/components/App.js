@@ -28,8 +28,8 @@ import TiDocumentText from 'react-icons/lib/ti/document-text';
 
 //******** CSS **********//
 
-import '../css/reset.css';
-import '../css/main.css';
+import '../css/reset.scss';
+import '../css/main.scss';
 
 //******* App *********//
 

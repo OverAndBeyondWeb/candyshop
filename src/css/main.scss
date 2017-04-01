@@ -1,3 +1,5 @@
+@import "colors";
+
 html {
 	min-height: 100%;
 } 
@@ -48,7 +50,7 @@ header .userstatus {
 }
 /************* Hero Component **************/
 #mainhero {
-	background: url('../assets/jellybeans.jpg');
+	 background: url('../assets/jellybeans.jpg');
 	height: 30vh;
 	width: 100%;
 }
@@ -67,18 +69,22 @@ header .userstatus {
 	height: 4.5vh;
 	width: 100%;
 	background-color: purple;
-}
-#navigation nav {
-	height: 100%;
-	margin: 0 auto;
-}
-#navigation li {
-	display: inline-block;
-	width: 25%;
-	text-align: center;
-	font-size: 1.5em;
-	line-height: 190%
-}
+
+  nav {
+  	height: 100%;
+  	margin: 0 auto;
+  }
+  li {
+  	display: inline-block;
+  	width: 25%;
+  	text-align: center;
+  	font-size: 1.5em;
+  	line-height: 190%;
+  }
+  a {
+    color: $chocoBrown;
+  }
+ } 
 /************* Home Component ***********/
 #page {
 	height: 52vh;
@@ -113,17 +119,17 @@ header .userstatus {
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-.sidemenu .headingcontainer {
-	padding-top: 20px;
-	padding-bottom: 10px;
-	background: Maroon;
-}
-.sidemenu h3 {
-	font-size: 1.3em;
-}
-.sidemenu a {
-  color: LemonChiffon;
+    .headingcontainer {
+    	padding-top: 20px;
+    	padding-bottom: 10px;
+    	background: Maroon;
+    }
+    h3 {
+    	font-size: 1.3em;
+    }
+    a {
+      color: LemonChiffon;
+    }
 }
 .candypage {
 	height: 86.5vh;
@@ -137,7 +143,26 @@ header .userstatus {
 	background-color: #FF69B4; /* candy pink */
 	text-align: center;
 	line-height: 250%;
+  color: LightYellow;
 }
+.allcandy {
+  @extends .candieshero;
+  background: url('../assets/allheader.jpg');
+
+}
+.hardcandy {
+  @extends .candieshero;
+  background: url('../assets/hardheader.jpg');
+}
+.gummycandy {
+  @extends .candieshero;
+  background: url('../assets/gummyheader.jpg');
+}
+.chocolate {
+  @extends .candieshero;
+  background: url('../assets/chocoheader.jpg');
+}
+
 .maincontent {
 	display: inline-block;
 	width: 80%;
@@ -162,12 +187,16 @@ header .userstatus {
 	width: 90%;
 	margin: auto;
 }
-.candycontainer div {
+.candycontainer figure {
 	display: inline-block;
 	height: 25%;
 	width: 28%;
 	border: blue dotted 2px;
 	text-align: center;
+}
+.candycontainer img {
+  height: 60%;
+  width: 60%;
 }
 /********** Login/Signup Forms *********/
 .form h3, form h3 {

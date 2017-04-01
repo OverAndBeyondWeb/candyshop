@@ -40,10 +40,7 @@ export class Candies extends Component {
 					
 					
 					<div className="maincontent">
-						<div className="candieshero">
-
-							<h1>Candies</h1>
-						</div>
+						
 						<Route path={`${this.props.match.url}/:candy`} component={this.props.location.pathname === "/candies/hard" ?
 							HardCandy : this.props.location.pathname === "/candies/gummy" ?
 							GummyCandy : this.props.location.pathname === "/candies/chocolate" ?

@@ -19,18 +19,20 @@ module.exports = {
 				exclude: /(node_modules)/,
 				loader: 'babel-loader',
 				query: {
-					presets: ['es2015', 'react']
+					presets: ['es2015', 'react'],
+					plugins:['transform-react-jsx-img-import']
 				}
 			},
 			{
-				test: /\.css$/,
+				test: /\.scss$/,
+
 				include: path.join(__dirname, 'src', 'css'),
-				loader: 'style-loader!css-loader'
+				loader: 'style-loader!css-loader!sass-loader'
 			},
 			{
 				test: /\.(png|jpg)$/,
-				include: path.join(__dirname, 'src'),
-				loader: 'file-loader'
+				include: path.join(__dirname, 'src', 'assets'),
+				loader: 'file-loader?name=[path][name].[ext]'
 			}
 		]
 	}
