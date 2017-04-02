@@ -27,9 +27,11 @@ import TiChartPie from 'react-icons/lib/ti/chart-pie';
 import TiDocumentText from 'react-icons/lib/ti/document-text';
 
 //******** CSS **********//
-
 import '../css/reset.scss';
 import '../css/main.scss';
+
+//******** JSON **********//
+import json from '../JSON/candylist.json';
 
 //******* App *********//
 
@@ -40,9 +42,14 @@ export class App extends Component {
 		this.state = {
 			isLoggedIn: false,
 			isFullPage: true,
-			users:[]
+			users:[],
+			candies: null
 		}
 		this.setIsFullPage = this.setIsFullPage.bind(this);
+	}
+
+	componentDidMount() {
+		this.setState({candies: json.candies});
 	}
 	
 	addUserToState(newUser) {
@@ -63,9 +70,9 @@ export class App extends Component {
 				<div>
 					{this.state.isFullPage ? <Header isLoggedIn={this.state.isLoggedIn}/> : null}
 					<Route exact path="/"  component={Home} id="bald"/>
-					<Route path="/candies" component={Candies} />
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
+					<Route path="/candies" render={({match, location}) => <Candies match={match} location={location}/>} />
 					<Route path="/requests" render={() => <SuggestionsAndRequests setIsFullPage={this.setIsFullPage}/>} />
 					<Route path="/login" render={() => <Login setIsFullPage={this.setIsFullPage}/>} />
 					<Route path="/signup" render={() => <SignUp 

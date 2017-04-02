@@ -1,16 +1,17 @@
 import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+let body = document.getElementsByTagName('body')[0];
 
 export class Login extends Component {
 	
-	
 	componentDidMount() {
 		this.props.setIsFullPage(false);
+		body.classList.add('formBackground');
 	}
 	componentWillUnmount() {
 		this.props.setIsFullPage(true);
-
+		body.classList.remove('formBackground');
 	}
 
 	render() {

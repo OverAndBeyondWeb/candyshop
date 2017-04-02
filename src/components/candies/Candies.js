@@ -10,7 +10,7 @@ import {HardCandy} from './HardCandy';
 export class Candies extends Component {
 
 	render() {
-		
+		console.log(this.props.location.pathname);
 		return (
 
 			<div id="candies">
@@ -21,7 +21,7 @@ export class Candies extends Component {
 						</div>
 						<nav className="candynav">
 							<ul>
-								<li><Link to={this.props.match.url}>All</Link></li>
+								<li><Link to={`${this.props.match.url}`}>All</Link></li>
 								<li><Link to={`${this.props.match.url}/hard`}>Hard Candy</Link></li>
 								<li><Link to={`${this.props.match.url}/gummy`}>Gummy Candy</Link></li>
 								<li><Link to={`${this.props.match.url}/chocolate`}>Chocolate</Link></li>
@@ -45,7 +45,7 @@ export class Candies extends Component {
 							HardCandy : this.props.location.pathname === "/candies/gummy" ?
 							GummyCandy : this.props.location.pathname === "/candies/chocolate" ?
 							ChocolateCandy : null}/>
-						<Route exact path={this.props.match.url} component={AllCandy}/>	
+						<Route exact path="/candies" component={AllCandy}/>	
 					</div>
 		
 						

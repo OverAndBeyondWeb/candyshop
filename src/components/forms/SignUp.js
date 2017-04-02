@@ -2,6 +2,7 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {browserHistory} from 'react-router'
 
+let body = document.getElementsByTagName('body')[0];
 
 export class SignUp extends Component {
 	constructor(props) {
@@ -30,12 +31,15 @@ export class SignUp extends Component {
 		link.click();
 	}
 	
-	componentWillMount() {
+	componentDidMount() {
 		this.setIsFullPage(false);
+		body.classList.add('formBackground');;
+
 	}
 
 	componentWillUnmount() {
 		this.setIsFullPage(true);
+		body.classList.remove('formBackground');
 	}
 	
 	render() {
