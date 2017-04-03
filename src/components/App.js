@@ -72,7 +72,9 @@ export class App extends Component {
 					<Route exact path="/"  component={Home} id="bald"/>
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
-					<Route path="/candies" render={({match, location}) => <Candies match={match} location={location}/>} />
+					<Route path="/candies" render={({match, location}) => <Candies match={match}
+																				   location={location}
+																				   candies={this.state.candies}/>} />
 					<Route path="/requests" render={() => <SuggestionsAndRequests setIsFullPage={this.setIsFullPage}/>} />
 					<Route path="/login" render={() => <Login setIsFullPage={this.setIsFullPage}/>} />
 					<Route path="/signup" render={() => <SignUp 

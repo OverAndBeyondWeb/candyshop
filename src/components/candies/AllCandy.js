@@ -1,7 +1,7 @@
 import {Component} from 'react';
 var path = require('path');
 
-
+let candylist;
 
 export class AllCandy extends Component {
 
@@ -13,21 +13,24 @@ export class AllCandy extends Component {
 		return arr;
 	}
 
+
 	render() {
+		{candylist = this.props.candies}
 		return (
 			<div className="candylist">
 				<div className="candieshero allcandy">
-					<h1>Candies</h1>
+					<h1>All Candies</h1>
 				</div>
 				<div className="headingcontainer">
 					<h2>All Candy</h2>
 				</div>
 				<div className="candycontainer">
 					{
-						this.numItems(5).map(function(item, i) {
-							return (<figure key={i}>
+						candylist.map(function(item) {
+							return (<figure key={item.id}>
 										<img src="../../assets/allpic.jpg"/>
-										<figcaption>all candy</figcaption>
+										<figcaption>{item.name}</figcaption>
+										<div>{item.price}</div>
 									</figure>)
 						})
 					}	

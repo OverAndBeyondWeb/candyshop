@@ -1,4 +1,5 @@
-const path = require('path');
+const path = require('path'),
+	  webpack= require('webpack');
 
 
 module.exports = {
@@ -10,7 +11,9 @@ module.exports = {
 	},
 	devServer: {
 		port: 3000,
-		contentBase: 'dist'
+		contentBase: 'dist',
+		hot: true,
+		open: true
 	},
 	module: {
 		loaders: [
@@ -39,5 +42,9 @@ module.exports = {
 				loader: 'file-loader?name=[path][name].[ext]'
 			}
 		]
-	}
+	},
+	plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
 }

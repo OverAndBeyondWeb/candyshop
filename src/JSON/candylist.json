@@ -2,7 +2,7 @@
 	"candies": [
 		{
 		"id": "1",
-		"name": "jolly rancher",
+		"name": "jolly ranchers",
 		"category": "hard",
 		"price": "$2.59",
 		"taxrate": ".08"

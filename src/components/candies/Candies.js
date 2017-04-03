@@ -9,12 +9,16 @@ import {HardCandy} from './HardCandy';
 
 export class Candies extends Component {
 
+	constructor() {
+		super();
+		console.log('super');
+	}
+
 	render() {
-		console.log(this.props.location.pathname);
+	
 		return (
 
 			<div id="candies">
-				<div className="candypage">
 					<div className="sidemenu">
 						<div className="headingcontainer">
 							<h3><Link to="/">CandyShop</Link></h3>
@@ -40,16 +44,15 @@ export class Candies extends Component {
 					
 					
 					<div className="maincontent">
+						<Route path={`${this.props.match.url}/:candy`} render={() => this.props.location.pathname === "/candies/hard" ?
+							<HardCandy candies={this.props.candies} /> : this.props.location.pathname === "/candies/gummy" ?
+							<GummyCandy candies={this.props.candies} /> : this.props.location.pathname === "/candies/chocolate" ?
+							<ChocolateCandy candies={this.props.candies} /> : null}/>
+						<Route exact path="/candies" render={() => <AllCandy candies={this.props.candies} />}/>	
 						
-						<Route path={`${this.props.match.url}/:candy`} component={this.props.location.pathname === "/candies/hard" ?
-							HardCandy : this.props.location.pathname === "/candies/gummy" ?
-							GummyCandy : this.props.location.pathname === "/candies/chocolate" ?
-							ChocolateCandy : null}/>
-						<Route exact path="/candies" component={AllCandy}/>	
 					</div>
 		
 						
-				</div>
 
 			</div>
 			
